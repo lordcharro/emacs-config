@@ -15,6 +15,11 @@
 ;(setq org-default-notes-file (concat org-directory "/mygtd.org"))
 (setq org-agenda-files '("~/org" "~/www/org" "~/www/_org"))
 
+;; Dracula theme path
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'dracula t)
+
+
 ;; Templates
 ;; using the "<P" shortcut 
 (require 'org-tempo)
@@ -31,7 +36,24 @@
 
 (setq org-todo-keyword-faces
       '(("BLOCKED" . (:foreground "OrangeRed" :weight bold))
-        ("STARTED" . (:foreground "magenta" :weight bold))
+        ("STARTED" . (:foreground "SteelBlue" :weight bold))
         ("CANCELED" . (:foreground "LimeGreen" :weight bold))
         ))
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes '(dracula))
+ '(custom-safe-themes
+   '("ed8e6f452855fc7338c8be77803666b34745c19c6667197db48952107fa6d983" default))
+ '(ispell-dictionary nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
