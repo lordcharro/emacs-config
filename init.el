@@ -13,7 +13,10 @@
 (setq default-directory "~/org/")
 ; to open a default file at the beginning 
 ;(setq org-default-notes-file (concat org-directory "/mygtd.org"))
-(setq org-agenda-files '("~/org" "~/www/org" "~/www/_org"))
+(setq org-agenda-files '("~/org"))
+
+;; Always show inline images
+(setq org-startup-with-inline-images t)
 
 ;; Templates
 ;; using the "<P" shortcut 
