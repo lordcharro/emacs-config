@@ -43,6 +43,32 @@
         ("CANCELED" . (:foreground "LimeGreen" :weight bold))
         ))
 
+;; Tags
+(setq org-tag-persistent-alist
+      '((:startgroup . nil)
+        ("HOME" . ?h)
+        ("RESEARCH" . ?r)
+        ("DIY" . ?i)
+        (:endgroup . nil)
+        (:startgroup . nil)
+        ("BACKEND" . ?b)
+        ("ANDROID" . ?a)
+        ("FRONTEND" . ?f)
+        (:endgroup . nil)
+        )
+      )
+
+(setq org-tag-faces
+      '(
+        ("HOME" . (:foreground "GoldenRod" :weight bold))
+        ("RESEARCH" . (:foreground "GoldenRod" :weight bold))
+        ("DIY" . (:foreground "GoldenRod" :weight bold))
+        ("BACKEND" . (:foreground "IndianRed1" :weight bold))
+        ("ANDROID" . (:foreground "IndianRed1" :weight bold))
+        ("FRONTEND" . (:foreground "IndianRed1" :weight bold))
+        )
+      )
+
 ;; logging time when a to-do is marked as done
 (setq org-log-done 'time)
 
