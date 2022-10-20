@@ -18,6 +18,9 @@
 ;; Always show inline images
 (setq org-startup-with-inline-images t)
 
+;; Start org files with all headers collapsed
+(setq org-startup-folded t)
+
 ;; If emacs <v28 and using a theme manually downloaded 
 ;; Dracula theme path
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
