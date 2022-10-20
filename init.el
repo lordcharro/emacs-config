@@ -23,11 +23,23 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'dracula t)
 
+;; Encryption
+;; if on macOS also this 2 lines
+(require 'epa-file)
+(epa-file-enable)
+
+(require 'org-crypt)
+; Encrypt all entries before saving
+(org-crypt-use-before-save-magic)
+(setq org-tags-exclude-from-inheritance (quote ("crypt")))
+; GPG key to use for encryption
+(setq org-crypt-key nil)
+
 ;; Templates
 ;; using the "<P" shortcut 
 (require 'org-tempo)
 (tempo-define-template "project"
-		       '("PROJECT:" p n "DATE:" n "PM:" n)
+		       '("PROJECT: " p n "DATE: " n "PM: " n)
 		       "<P"
 		       "Insert a project tempate")
 
