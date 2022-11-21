@@ -26,6 +26,10 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'dracula t)
 
+;; Disable apple right alt
+(when (eq system-type 'darwin)
+  (setq mac-right-option-modifier 'none))
+
 ;; Encryption
 ;; if on macOS also this 2 lines
 (require 'epa-file)
