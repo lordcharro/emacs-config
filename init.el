@@ -4,6 +4,7 @@
 ;; key binding
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
 
 ;; no startup msg (this was preventing the default-directory)  
 (setq inhibit-startup-message t)
@@ -12,8 +13,8 @@
 (setq org-directory (expand-file-name "~/org"))
 (setq default-directory "~/org/")
 ; to open a default file at the beginning 
-;(setq org-default-notes-file (concat org-directory "/mygtd.org"))
 (setq org-agenda-files '("~/org"))
+(setq org-default-notes-file (concat org-directory "~/org/notes.org"))
 
 ;; Always show inline images
 (setq org-startup-with-inline-images t)
